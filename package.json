@@ -1,0 +1,14 @@
+{
+  "name": "jogodavelha_pwa",
+  "version": "1.0.0",
+  "description": "jogo da velha",
+  "main": "index.html",
+  "scripts": {
+    "serve": "serve ."
+  },
+  "author": "FilipePereiraLima",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
