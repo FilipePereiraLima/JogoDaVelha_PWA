@@ -32,12 +32,12 @@ function jogada(e) {
         player = 'X'
     }
 
-    vitoria();
+    verifica();
 
     currentPlayer.innerHTML = 'vez de: '+player
 }
 
-function vitoria() {
+function verifica() {
     let quadrados = [];
     const botoes = document.querySelectorAll(".board button")
     for(let i = 0; i < botoes.length; i++){
@@ -47,51 +47,65 @@ function vitoria() {
     //horizontal
     if(quadrados[0] != '' && quadrados[1] != '' && quadrados[2] != ''){
         if(quadrados[0] == quadrados[1] && quadrados[1] == quadrados[2]){
-            alert(quadrados[0])
+            ganhar(quadrados[0])
         }
     }
 
     if(quadrados[3] != '' && quadrados[4] != '' && quadrados[5] != ''){
         if(quadrados[3] == quadrados[4] && quadrados[4] == quadrados[5]){
-            alert(quadrados[3])
+            ganhar(quadrados[3])
         }
     }
 
     if(quadrados[6] != '' && quadrados[7] != '' && quadrados[8] != ''){
         if(quadrados[6] == quadrados[7] && quadrados[7] == quadrados[8]){
-            alert(quadrados[6])
+            ganhar(quadrados[6])
         }
     }
 
     //vertical
     if(quadrados[0] != '' && quadrados[3] != '' && quadrados[6] != ''){
         if(quadrados[0] == quadrados[3] && quadrados[3] == quadrados[6]){
-            alert(quadrados[0])
+            ganhar(quadrados[0])
         }
     }
 
     if(quadrados[1] != '' && quadrados[4] != '' && quadrados[7] != ''){
         if(quadrados[1] == quadrados[4] && quadrados[4] == quadrados[7]){
-            alert(quadrados[1])
+            ganhar(quadrados[1])
         }
     }
 
     if(quadrados[2] != '' && quadrados[5] != '' && quadrados[8] != ''){
         if(quadrados[2] == quadrados[5] && quadrados[5] == quadrados[8]){
-            alert(quadrados[2])
+            ganhar(quadrados[2])
         }
     }
 
     //diagonal
     if(quadrados[0] != '' && quadrados[4] != '' && quadrados[8] != ''){
         if(quadrados[0] == quadrados[4] && quadrados[4] == quadrados[8]){
-            alert(quadrados[0])
+            ganhar(quadrados[0])
         }
     }
 
     if(quadrados[2] != '' && quadrados[4] != '' && quadrados[6] != ''){
         if(quadrados[2] == quadrados[4] && quadrados[4] == quadrados[6]){
-            alert(quadrados[2])
+            ganhar(quadrados[2])
         }
     }
+
+    if(quadrados.indexOf('') == -1) empatar();
+}
+
+const textoGanhador = document.querySelector('.ganhador')
+
+function ganhar(player) {
+    textoGanhador.innerHTML = player+' ganhou a partida'
+    iniciar();
+}
+
+function empatar(player){
+    textoGanhador.innerHTML = 'empate'
+    iniciar();
 }
