@@ -2,23 +2,23 @@
     "name": "Jogo da Velha",
     "icons": [
         {
-            "src": "",
+            "src": "imagens/icon-256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "",
+            "src": "imagens/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "",
+            "src": "imagens/maskable-icon.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
     ],
-    "short_name": "Jogo da Velha",
+    "short_name": "JDV",
     "lang": "pt-BR",
     "start_url": "/",
     "display": "standalone",

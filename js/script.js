@@ -47,55 +47,55 @@ function verifica() {
     //horizontal
     if(quadrados[0] != '' && quadrados[1] != '' && quadrados[2] != ''){
         if(quadrados[0] == quadrados[1] && quadrados[1] == quadrados[2]){
-            ganhar(quadrados[0])
+            return ganhar(quadrados[0])
         }
     }
 
     if(quadrados[3] != '' && quadrados[4] != '' && quadrados[5] != ''){
         if(quadrados[3] == quadrados[4] && quadrados[4] == quadrados[5]){
-            ganhar(quadrados[3])
+            return ganhar(quadrados[3])
         }
     }
 
     if(quadrados[6] != '' && quadrados[7] != '' && quadrados[8] != ''){
         if(quadrados[6] == quadrados[7] && quadrados[7] == quadrados[8]){
-            ganhar(quadrados[6])
+            return ganhar(quadrados[6])
         }
     }
 
     //vertical
     if(quadrados[0] != '' && quadrados[3] != '' && quadrados[6] != ''){
         if(quadrados[0] == quadrados[3] && quadrados[3] == quadrados[6]){
-            ganhar(quadrados[0])
+            return ganhar(quadrados[0])
         }
     }
 
     if(quadrados[1] != '' && quadrados[4] != '' && quadrados[7] != ''){
         if(quadrados[1] == quadrados[4] && quadrados[4] == quadrados[7]){
-            ganhar(quadrados[1])
+            return ganhar(quadrados[1])
         }
     }
 
     if(quadrados[2] != '' && quadrados[5] != '' && quadrados[8] != ''){
         if(quadrados[2] == quadrados[5] && quadrados[5] == quadrados[8]){
-            ganhar(quadrados[2])
+            return ganhar(quadrados[2])
         }
     }
 
     //diagonal
     if(quadrados[0] != '' && quadrados[4] != '' && quadrados[8] != ''){
         if(quadrados[0] == quadrados[4] && quadrados[4] == quadrados[8]){
-            ganhar(quadrados[0])
+            return ganhar(quadrados[0])
         }
     }
 
     if(quadrados[2] != '' && quadrados[4] != '' && quadrados[6] != ''){
         if(quadrados[2] == quadrados[4] && quadrados[4] == quadrados[6]){
-            ganhar(quadrados[2])
+            return ganhar(quadrados[2])
         }
     }
 
-    if(quadrados.indexOf('') == -1) empatar();
+    if(quadrados.indexOf('') == -1) return empatar();
 }
 
 const textoGanhador = document.querySelector('.ganhador')
