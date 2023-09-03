@@ -4,6 +4,7 @@ body{
     justify-items: center;
     align-items: center;
     font-family: 'Helvetica', sans-serif;
+    background-color: rgb(240, 250, 255);
 }
 
 .board{
