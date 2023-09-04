@@ -12,7 +12,7 @@ let player = 'X';
 
 function iniciar() {
 
-    currentPlayer.innerHTML = 'vez de: '+player;
+    currentPlayer.innerHTML = 'Vez de: '+player;
 
     document.querySelectorAll(".board button").forEach((item) => {
         item.innerHTML = "";
@@ -34,7 +34,7 @@ function jogada(e) {
 
     verifica();
 
-    currentPlayer.innerHTML = 'vez de: '+player
+    currentPlayer.innerHTML = 'Vez de: '+player
 }
 
 function verifica() {
@@ -101,11 +101,11 @@ function verifica() {
 const textoGanhador = document.querySelector('.ganhador')
 
 function ganhar(player) {
-    textoGanhador.innerHTML = player+' ganhou a partida'
+    textoGanhador.innerHTML = player+' Ganhou a Partida'
     iniciar();
 }
 
 function empatar(player){
-    textoGanhador.innerHTML = 'empate'
+    textoGanhador.innerHTML = 'Empate'
     iniciar();
 }

@@ -4,7 +4,8 @@ body{
     justify-items: center;
     align-items: center;
     font-family: 'Helvetica', sans-serif;
-    background-color: rgb(240, 250, 255);
+    background-color: rgb(43, 42, 42);
+    padding-top: 5%;
 }
 
 .board{
@@ -20,4 +21,8 @@ body{
     cursor: pointer;
     font-size: 50px;
     background-color: white;
+}
+h2{
+    color:rgb(255, 255, 255) ;
+    border-bottom: 1px solid rgb(197, 171, 22);
 }
